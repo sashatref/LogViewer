@@ -33,6 +33,10 @@ int main(int argc, char *argv[])
     ExtendApp a(argc, argv);
     a.setApplicationVersion(FULL_VER);
     a.setStyle(QStyleFactory::create("customStyle"));
+    a.setDefaultSettingsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
+                             + "/settings.xml");
+    a.setDefaultLayoutPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
+                           + "/layout.bin");
     a.parseCommandLine();
 
     SettingsInfo *s = sgSettings::instance();
