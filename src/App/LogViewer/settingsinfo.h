@@ -13,17 +13,13 @@ class SettingsInfo : public IGadget, public IPropertyBrowserBase
 {
     Q_GADGET
     DEFINE_MO
-    Q_PROPERTY(int port MEMBER m_port)
-    Q_PROPERTY(bool autoStart MEMBER m_autoStart)
-    Q_PROPERTY(QString wwwPath MEMBER m_wwwPath)
+    Q_PROPERTY(QString language MEMBER m_language)
 public:
     virtual void propertyInfoMap(PropertyInfoMapType &m) const override;
 
     static void registerType();
 
-    int m_port = 80;
-    bool m_autoStart = false;
-    QString m_wwwPath;
+    QString m_language = "en";
 };
 
 Q_DECLARE_METATYPE(SettingsInfo)

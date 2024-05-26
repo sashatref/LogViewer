@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     registerTypes();
 
     ExtendApp a(argc, argv);
+    a.setApplicationName("LogViewer");
     a.setApplicationVersion(FULL_VER);
     a.setStyle(QStyleFactory::create("customStyle"));
     a.setDefaultSettingsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
