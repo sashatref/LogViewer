@@ -29,8 +29,6 @@ if(NOT BUILD_STATIC)
     )
 else()
     deployTargets(
-        TARGETS
-        LogViewer
         MAINTARGET
         LogViewer
     )

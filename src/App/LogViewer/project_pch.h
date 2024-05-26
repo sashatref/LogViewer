@@ -1,10 +1,11 @@
 #pragma once
 
 #include <QDebug>
-#include <QtPlugin>
-#include <QStyleFactory>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QStandardPaths>
+#include <QStyleFactory>
+#include <QtPlugin>
 #include <functional>
 
 #include <PropertyBrowser3/settingsform.h>
