@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
+#include "settingsinfo.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,16 @@ protected:
     virtual void initConnections() override;
     virtual void settingsChanged() override;
 
+private slots:
+    void on_actionAboutApp_triggered();
+
+    void on_actionOpen_triggered();
+
+    void openFile(const QString &path);
+
 private:
     Ui::MainWindow *ui;
+    QString m_lastOpenedDocPath;
+
+    SettingsInfo &s = sgSettings::ins();
 };
